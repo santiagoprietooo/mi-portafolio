@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+/* ----- body Background Style -----*/
+body {
+    @apply bg-gray-200 overflow-x-hidden;
+}
+
+/* ----- h2 Styles -----*/
+.header-two {
+    @apply text-blue-700 text-3xl text-center font-bold max-xl:text-2xl;
+}
+
+/* ----- Card Styles -----*/
+.svg-style {
+    @apply size-10 text-blue-700;
+}
+
+.info-card-style {
+    @apply flex flex-col items-start gap-4 min-h-80 w-full p-8 bg-blue-500/30 rounded-lg transition duration-300 ease-in-out hover:bg-blue-500/40;
+}
+
+/* ----- Form Styles -----*/
+.form-field {
+    @apply relative w-full;
+}
+.form-field-label {
+    @apply absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 transition-all;
+}
+.form-field-label-textarea {
+    @apply absolute left-4 top-1/4 -translate-y-1/4 text-gray-500 transition-all;
+}
+.form-field-input {
+    @apply w-full p-4 pt-6 border-2 border-black/45 rounded-lg placeholder-transparent focus:outline-none;
+}
+.form-field-input-value {
+    @apply top-4 text-sm text-black/50;
+}
+
+/* ----- Contact Styles -----*/
+.a-contact-btn {
+    @apply flex items-center justify-center size-16 p-4 bg-blue-700/15 rounded-lg transition duration-300 ease-in-out hover:bg-blue-700/30;
+}
+
+/* ----- Utilities -----*/
+@layer utilities {
+    .p-x-responsive {
+        padding-inline: clamp(16px, 6.25vw, 96px);
+    }
+    .responsive-w-card {
+        width: clamp(260px, 75%, 767px);
+    }
+}
+
+/* ----- Fuentes ----- */
+@font-face {
+    font-family: "Designer";
+    src: url("../assets/fonts/Designer.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CocaCola";
+    src: url("../assets/fonts/Coca-Cola.TTF") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EduVICWANT";
+    src: url("../assets/fonts/EduVICWANT.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "JurnalNote";
+    src: url("../assets/fonts/Jurnal-Note.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.designer {
+    @apply font-[Designer];
+}
+.coca-cola {
+    @apply font-[CocaCola] text-2xl -mb-2;
+}
+.eduvicwant {
+    @apply font-[EduVICWANT] font-bold;
+}
+.jurnal-note {
+    @apply font-[JurnalNote] text-2xl;
+}
